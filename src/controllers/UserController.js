@@ -1,7 +1,7 @@
 const db = require("../database");
 
 async function list(req, res) {
-  const results = await db("users");
+  const results = await db("users").where('status', '=', 'A');
 
   return res.json(results);
 }
@@ -33,8 +33,8 @@ async function atualizar_usuario(req, res, next) {
 async function deletar_usuario(req, res, next) {
   try {
     const { id } = req.params;
-
-    await db("users").where("id", id).del();
+    const status = "D"
+    await db("users").where("id", id).update('status', status)
 
     return res.status(201).send();
   } catch (error) {
