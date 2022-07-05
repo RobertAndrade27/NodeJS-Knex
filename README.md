@@ -2,6 +2,8 @@
 
 <p align="center">CRUD básico utilizando Nodejs e Knex para criar migrations e seeds</p>
 
+### Todo
+
 - 1 - Instalado nodemon como dependencia de desenvolvimento : npm i nodemon -D
 - 2 - Instalado no projeto as dependencias: npm i knex mysql express
 - 3 - Configurar o package.json "main" "src/server.js" / "start": "nodemon src/server.js"
