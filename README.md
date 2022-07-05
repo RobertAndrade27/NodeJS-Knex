@@ -16,3 +16,15 @@
 - 10 - criar o seed : npx knex seed:make (nome da seed) exemplo 001_users e configurar o diretorio igual das migrations com o arquivo /seeds
 - 11 - Após configurado a seeds rodar o comando para popular: npx knex seed:run
 - 12 - instalado o  npm i dotenv e importado no server require('dotenv').config() para configurações de chaves com o arquivo .env
+
+
+### Routes
+
+-- Usuarios
+- get(/users) - Listando todos usuarios com o status A - Ativo
+- post(/users/insert) - Inserindo usuarios com informações no body com um JSON 
+- put(/users/:id) - Atualizando usuarios com informações no body com um JSON e userid sendo enviado via parametro
+- delete(/users/:id) - SoftDelete atualizando o status para D de Deletado
+
+--Produtos
+- get(/products) - Listando todos produtos com limite de pagina com apenas 10 resultados, enviar proxima pagina no query ex. page=2
